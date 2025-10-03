@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenTech - Mapa</title>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">🌱 GreenTech</div>
+    <ul>
+      <li><a href="#">Nosotros</a></li>
+      <li><a href="#">Mapa</a></li>
+      <li><a href="#">Estadísticas</a></li>
+    </ul>
+      <button id="toggle-theme">🌙</button>
+  </nav>
+
+  <!-- Contenedor principal -->
+  <main class="dashboard">
+    <!-- Lista de parques -->
+    <aside id="parques" class="card">
+      <h2>📍 Parques con dispositivos</h2>
+      <ul>
+        <li data-lat="-34.6037" data-lng="-58.3816">Parque Central</li>
+        <li data-lat="-34.6090" data-lng="-58.3775">Parque Norte</li>
+        <li data-lat="-34.6150" data-lng="-58.3850">Plaza Verde</li>
+        <li data-lat="-34.6200" data-lng="-58.3900">Reserva Sur</li>
+      </ul>
+    </aside>
+
+    <!-- Mapa principal -->
+    <div id="mapa" class="card"></div>
+
+    <!-- Panel derecho -->
+    <aside id="panel" class="card">
+      <!-- Estadísticas -->
+      <div id="estadisticas">
+        <h3>📊 Estadísticas Semanales</h3>
+        <canvas id="grafico"></canvas>
+      </div>
+
+      <!-- Últimos datos -->
+      <div id="ultimos-datos">
+        <h3>♻️ Últimos Datos</h3>
+        <p>Basura: 120 KG</p>
+        <p>Reciclable: 80 KG</p>
+        <p>Total Recogido: 200 KG</p>
+        <p>Última Recolección: 14:30 hs</p>
+        <p>Último Recorrido: 15:00 hs</p>
+      </div>
+    </aside>
+  </main>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
